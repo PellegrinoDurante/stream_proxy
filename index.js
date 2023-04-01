@@ -1,6 +1,7 @@
 const createDNSServer = require("./dns");
 const createMediaServer = require("./media");
 
+// Create DNS server
 const dnsServer = createDNSServer();
 
 dnsServer.on("requestError", (error) => {
@@ -11,9 +12,10 @@ dnsServer.on("listening", () => {
   console.log("Server started", dnsServer.addresses());
 });
 
-// Start Media server
+// Create media server
 const mediaServer = createMediaServer();
 
+// Start servers
 try {
   dnsServer.listen({
     udp: {
@@ -24,6 +26,7 @@ try {
   });
   mediaServer.run();
 } catch (e) {
+  console.log('Error', e);
   dnsServer.close();
   mediaServer.stop();
 }
