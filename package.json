@@ -1,0 +1,27 @@
+{
+  "name": "stream_proxy",
+  "version": "1.0.0",
+  "description": "A simple DNS and media server which allows to stream from consoles or other sources through this server on streaming apps like OBS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PellegrinoDurante/stream_proxy.git"
+  },
+  "author": "Pellegrino Durante",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PellegrinoDurante/stream_proxy/issues"
+  },
+  "homepage": "https://github.com/PellegrinoDurante/stream_proxy#readme",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "dns2": "^2.1.0",
+    "node-media-server": "^2.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.37.0"
+  }
+}
